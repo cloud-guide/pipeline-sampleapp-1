@@ -19,10 +19,10 @@ pipeline {
           steps {
              echo 'Running build script..'
             // Option 1: chmod and run in one step
-             sh 'chmod +x app.sh && ./app.sh'
+             //sh 'chmod +x app.sh && ./app.sh'
 
            // OR Option 2: Run directly via shell without needing +x
-           // sh 'bash app.sh'
+             sh 'bash app.sh'
            } 
         }
 
