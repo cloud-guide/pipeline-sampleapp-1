@@ -8,7 +8,12 @@ pipeline {
                 checkout scm
             }
         }
-
+        stage('Debug Workspace') {
+          steps {
+             echo "Listing all files in workspace:"
+             sh 'ls -al'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Running build script..'
